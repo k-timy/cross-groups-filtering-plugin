@@ -85,30 +85,11 @@ class Cross_Groups_Filtering
         $this->return_data = str_replace('{piped_entry_ids}', $ids,ee()->TMPL->tagdata);
     }
 
-    // ----------------------------------------
-    //  Plugin Usage
-    // ----------------------------------------
-
-    // This function describes how the plugin is used.
-    //  Make sure and use output buffering
-
     public static function usage()
     {
         if(REQ === 'CP')
             return file_get_contents(dirname(__FILE__).'/README.md');
         return null;
-//        ob_start();
-//        ?>
-<!---->
-<!--       -->
-<!---->
-<!---->
-<!--        --><?php
-//        $buffer = ob_get_contents();
-//
-//        ob_end_clean();
-//
-//        return $buffer;
     }
 
     function processQuery($sql)
@@ -122,5 +103,3 @@ class Cross_Groups_Filtering
         return $results;
     }
 }
-
-?>
